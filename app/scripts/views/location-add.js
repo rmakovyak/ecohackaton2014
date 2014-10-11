@@ -31,14 +31,26 @@ define([
         },
 
         scan: function() {
-           this.scanData = {}
+           var scanData = {}
 
-           this.scanData.humidity = ( Math.random() * (100 - 0) + 0 ).toPrecision(4);
-           this.scanData.acidity = ( Math.random() * (6 - 1) + 1 ).toPrecision(2);
-           this.scanData.temperature = ( Math.random() * (60 + 20) - 20 ).toPrecision(4);
-           this.scanData.illumination = ( Math.random() * (100 + 0) - 0 ).toPrecision(4);
+           $( ".scan-data" ).hide();
+           $( ".loader" ).show();
 
-           console.log( this.scanData );
+           setTimeout( function () {
+               scanData.humidity = ( Math.random() * (100 - 0) + 0 ).toPrecision(4);
+               scanData.acidity = ( Math.random() * (6 - 1) + 1 ).toPrecision(2);
+               scanData.temperature = ( Math.random() * (60 + 20) - 20 ).toPrecision(4);
+               scanData.illumination = ( Math.random() * (100 + 0) - 0 ).toPrecision(4);
+
+               $( ".t" ).html( scanData.temperature );
+               $( ".a" ).html( scanData.acidity );
+               $( ".i" ).html(  scanData.illumination );
+               $( ".h" ).html(  scanData.humidity );
+
+               $( ".scan-data" ).show();
+               $( ".loader" ).hide();
+           }, 3000);
+
         }
     });
 

@@ -115,3 +115,16 @@ a {
 .button-action {
     @include button($button-med, $mainColor);
 }
+
+/* Location view */
+.location-property {
+    .value p {
+        margin: 0;
+    }
+}
+
+.plant i {
+    float: right;
+    font-size: 24px;
+}
+
