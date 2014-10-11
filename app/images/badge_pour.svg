@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>badges 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="50" cy="50" r="50"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Oval-1-+-Rectangle-1" sketch:type="MSLayerGroup">
+            <circle id="Oval-1" fill="#65D9DE" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
+            <g id="Rectangle-1">
+                <mask id="mask-2" sketch:name="Mask" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <rect fill="#FAE557" sketch:type="MSShapeGroup" mask="url(#mask-2)" x="-15" y="-12" width="137" height="70"></rect>
+                <g id="Group" mask="url(#mask-2)">
+                    <g transform="translate(-5.000000, 52.000000)">
+                        <g id="Oval-3">
+                            <circle fill="#65D9DE" sketch:type="MSShapeGroup" cx="10" cy="10" r="10"></circle>
+                        </g>
+                        <g id="Oval-4" transform="translate(18.000000, 0.000000)">
+                            <circle id="Oval-3" fill="#65D9DE" sketch:type="MSShapeGroup" cx="10" cy="10" r="10"></circle>
+                        </g>
+                        <g id="Oval-5" transform="translate(36.000000, 0.000000)">
+                            <circle id="Oval-3" fill="#65D9DE" sketch:type="MSShapeGroup" cx="10" cy="10" r="10"></circle>
+                        </g>
+                        <g id="Oval-6" transform="translate(54.000000, 0.000000)">
+                            <circle id="Oval-3" fill="#65D9DE" sketch:type="MSShapeGroup" cx="10" cy="10" r="10"></circle>
+                        </g>
+                        <g id="Oval-7" transform="translate(72.000000, 0.000000)">
+                            <circle id="Oval-3" fill="#65D9DE" sketch:type="MSShapeGroup" cx="10" cy="10" r="10"></circle>
+                        </g>
+                        <g id="Oval-8" transform="translate(90.000000, 0.000000)">
+                            <circle id="Oval-3" fill="#65D9DE" sketch:type="MSShapeGroup" cx="10" cy="10" r="10"></circle>
+                        </g>
+                    </g>
+                </g>
+                <path d="M50,86.3535156 C61.7360509,86.3535156 71.25,74.9367767 71.25,60.8535156 C71.25,46.7702545 50,13.6464844 50,13.6464844 C50,13.6464844 28.75,46.7702545 28.75,60.8535156 C28.75,74.9367767 38.2639491,86.3535156 50,86.3535156 Z" id="Oval-9" fill="#36B5D0" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
