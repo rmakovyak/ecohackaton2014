@@ -17,14 +17,15 @@ define([
 
         className: '',
 
-        events: {},
+        events: {
+            "click .add-location": "addLocation"
+        },
 
         initialize: function () {
             this.listenTo(this.model, 'sync', this.render);
         },
 
         render: function () {
-            console.log(this.model.toJSON());
             this.$el.html(this.template( { models: this.model.toJSON() }));
             return this;
         }

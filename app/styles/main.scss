@@ -5,6 +5,38 @@
 
 @import "foundation";
 
+.loader {
+    background-image: url(../images/ajax-loader.gif);
+    width: rem-calc(64);
+    height: rem-calc(64);
+    margin: rem-calc(30) auto;
+}
+
+.back-button {
+    border: solid 1px #8d8d8d;
+    position: relative;
+    display: block;
+    height:42px;
+    width:42px;
+    margin: 0 auto;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+
+    i {
+        color: #8d8d8d;
+        position: absolute;
+        left: 13px;
+        top: 3px;
+        font-size: 31px;
+    }
+
+    &:hover {
+        border-color: #8d8d8d;
+        i {
+            color: #8d8d8d;
+        }
+    }
+}
 
 body {
     background-color: white;
@@ -40,10 +72,13 @@ ul {
     li{
         padding: 10px;
         border-top: 1px solid gainsboro;
-        &:last-child {
-            border-bottom: 1px solid gainsboro;
-        };
     }
+
+    &:last-child {
+        border-bottom: 1px solid gainsboro;
+    }
+
+    margin-left:0;
 }
 
 .location-img {
@@ -51,9 +86,32 @@ ul {
     width: 80px;
     height: 80px;
     border: 2px solid gainsboro;
+    transition: border-color 0.2s ease;
+}
+
+.location {
+    cursor: pointer;
+    &:hover {
+        .location-img {
+            border: 2px solid $mainColor;
+        }
+
+        .location-title {
+            color: $mainColor;
+        }
+    }
 }
 
 .location-title {
     margin-top:20px;
     font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+a {
+    color: #222;
+}
+
+.button-action {
+    @include button($button-med, $mainColor);
 }

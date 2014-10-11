@@ -4,13 +4,17 @@ define([
     'jquery',
     'backbone',
     'views/locations',
-    'collections/locations'
-], function ($, Backbone, LocationsView, LocationsCollection) {
+    'views/location-add',
+    'collections/locations',
+    'models/location'
+], function ($, Backbone, LocationsView, AddLocationView, LocationsCollection, LocationModel) {
     'use strict';
 
     var MainRouter = Backbone.Router.extend({
         routes: {
-            "": "locations"
+            "": "locations",
+            "locations": "locations",
+            "location/add": "addLocation"
         },
 
         locations: function() {
@@ -20,6 +24,12 @@ define([
             $( ".container" ).html( this.locationsView.el );
 
             this.locationsCollection.fetch();
+        },
+
+        addLocation: function() {
+            this.locationModel = new LocationModel();
+            this.addLocationView = new AddLocationView( { model: this.locationModel } );
+            $( ".container" ).html( this.addLocationView.render().el );
         }
 
     });
