@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>logo 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="100" cy="100" r="100"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-3-+-Rectangle-4-+-Group-+-Group-2-+-Group" sketch:type="MSLayerGroup">
+            <mask id="mask-2" sketch:name="Mask" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)">
+                <g transform="translate(-50.000000, -74.000000)">
+                    <g id="Rectangle-3-+-Rectangle-4">
+                        <rect id="Rectangle-3" fill="#75C167" sketch:type="MSShapeGroup" x="0" y="142" width="299" height="142"></rect>
+                        <rect id="Rectangle-4" fill="#E4FBFF" sketch:type="MSShapeGroup" x="0" y="0" width="299" height="142"></rect>
+                    </g>
+                    <g id="Group-+-Group-2" transform="translate(61.000000, 89.000000)">
+                        <g id="Group" sketch:type="MSShapeGroup">
+                            <g id="Triangle-1-+-Triangle-2-+-Triangle-3" transform="translate(44.000000, 0.000000)" fill="#3B7B3E">
+                                <polygon id="Triangle-1" points="23.5 0 27 70 20 70 "></polygon>
+                                <polygon id="Triangle-2" points="15 16 20 101 10 101 "></polygon>
+                                <polygon id="Triangle-3" points="5 45 10 145 0 145 "></polygon>
+                            </g>
+                            <g id="Triangle-1-+-Triangle-2-+-Triangle-4" transform="translate(0.000000, 71.000000)" fill="#3B7B3E">
+                                <polygon id="Triangle-1" points="34.8148148 0 40 103.793103 29.6296296 103.793103 "></polygon>
+                                <polygon id="Triangle-2" points="22.2222222 23.7241379 29.6296296 149.758621 14.8148148 149.758621 "></polygon>
+                                <polygon id="Triangle-3" points="7.40740741 66.7241379 14.8148148 215 0 215 "></polygon>
+                            </g>
+                            <circle id="Oval-1" fill="#D06A55" cx="26" cy="138" r="6"></circle>
+                            <circle id="Oval-4" fill="#D06A55" cx="16" cy="160" r="7"></circle>
+                            <circle id="Oval-2" fill="#D06A55" cx="51" cy="68" r="3"></circle>
+                            <circle id="Oval-3" fill="#D06A55" cx="45" cy="84" r="4"></circle>
+                        </g>
+                        <g id="Group-2" transform="translate(142.500000, 143.000000) scale(-1, 1) translate(-142.500000, -143.000000) translate(107.000000, 0.000000)" sketch:type="MSShapeGroup">
+                            <g id="Triangle-1-+-Triangle-2-+-Triangle-3" transform="translate(44.000000, 0.000000)" fill="#3B7B3E">
+                                <polygon id="Triangle-1" points="23.5 0 27 70 20 70 "></polygon>
+                                <polygon id="Triangle-2" points="15 16 20 101 10 101 "></polygon>
+                                <polygon id="Triangle-3" points="5 45 10 145 0 145 "></polygon>
+                            </g>
+                            <g id="Triangle-1-+-Triangle-2-+-Triangle-4" transform="translate(0.000000, 71.000000)" fill="#3B7B3E">
+                                <polygon id="Triangle-1" points="34.8148148 0 40 103.793103 29.6296296 103.793103 "></polygon>
+                                <polygon id="Triangle-2" points="22.2222222 23.7241379 29.6296296 149.758621 14.8148148 149.758621 "></polygon>
+                                <polygon id="Triangle-3" points="7.40740741 66.7241379 14.8148148 215 0 215 "></polygon>
+                            </g>
+                            <circle id="Oval-1" fill="#D06A55" cx="26" cy="138" r="6"></circle>
+                            <circle id="Oval-4" fill="#D06A55" cx="16" cy="160" r="7"></circle>
+                            <circle id="Oval-2" fill="#D06A55" cx="51" cy="68" r="3"></circle>
+                            <circle id="Oval-3" fill="#D06A55" cx="45" cy="84" r="4"></circle>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(99.000000, 160.000000)">
+                        <path d="M5.68434189e-14,8.49979365 L76.0744727,8.49979365 L103.335938,-0.31570318 L27.2614648,-0.31570318 L5.68434189e-14,8.49979365 Z" id="Rectangle-1" fill="#BCBCBC" sketch:type="MSShapeGroup"></path>
+                        <rect id="Rectangle-2" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="8.49979365" width="76.0744727" height="8.81549683"></rect>
+                        <path d="M76.0744727,17.3152905 L103.173963,8.34674683 L103.173963,-0.46875 L76.0744727,8.49979365 L76.0744727,17.3152905 Z" id="Rectangle-3" fill="#CBCBCB" sketch:type="MSShapeGroup"></path>
+                        <rect id="Rectangle-2" fill="#979797" sketch:type="MSShapeGroup" x="47.9954828" y="17.3152905" width="7.5094973" height="107.091962"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
