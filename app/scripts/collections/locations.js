@@ -3,7 +3,7 @@
 define([
     'underscore',
     'backbone',
-    'models/locations'
+    'models/location'
 ], function (_, Backbone, LocationsModel) {
     'use strict';
 

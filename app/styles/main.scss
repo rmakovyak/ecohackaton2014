@@ -17,7 +17,6 @@
     "foundation/scss/foundation/components/alert-boxes";
 
 body {
-    font-family: 'Open Sans', sans-serif;
     background-color: white;
     padding: 0;
     margin: 0;
@@ -28,10 +27,31 @@ header {
     height: 50px;
     padding: 10px 0px;
     color: #fff;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 section {
     margin-top:20px;
 }
 
+img {
+    margin-top: -1px;
+}
+
+h4 {
+}
+
+.container {
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    li{
+        padding: 10px;
+        border-top: 1px solid gainsboro;
+        &:last-child {
+            border-bottom: 1px solid gainsboro;
+        };
+    }
+}

@@ -1,6 +1,7 @@
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var SERVER_PORT = 9000;
+var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
@@ -62,13 +63,22 @@ module.exports = function (grunt) {
                 // change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
             },
+            proxies: [
+                {
+                    context: '/organicgarden/api',
+                    host: '192.168.100.187',
+                    port: 8080,
+                    changeOrigin: true
+                }
+            ],
             livereload: {
                 options: {
                     middleware: function (connect) {
                         return [
                             lrSnippet,
                             mountFolder(connect, '.tmp'),
-                            mountFolder(connect, yeomanConfig.app)
+                            mountFolder(connect, yeomanConfig.app),
+                            proxySnippet
                         ];
                     }
                 }
@@ -289,6 +299,7 @@ module.exports = function (grunt) {
         if (target === 'test') {
             return grunt.task.run([
                 'clean:server',
+                'configureProxies',
                 'createDefaultTemplate',
                 'jst',
                 'compass:server',
@@ -300,6 +311,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'configureProxies',
             'createDefaultTemplate',
             'jst',
             'compass:server',
