@@ -9,7 +9,7 @@ define([
     'use strict';
 
     var LocationView = Backbone.View.extend({
-        template: JST['app/scripts/templates/location.ejs'],
+        template: JST['app/scripts/templates/plant.ejs'],
 
         tagName: 'div',
 
@@ -24,7 +24,7 @@ define([
         },
 
         render: function () {
-            this.$el.html(this.template( { location: this.model.toJSON() } ));
+            this.$el.html(this.template( { model: this.model.toJSON() } ));
             return this;
         }
     });

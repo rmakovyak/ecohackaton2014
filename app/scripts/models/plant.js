@@ -6,7 +6,7 @@ define([
 ], function (_, Backbone) {
     'use strict';
 
-    var LocationModel = Backbone.Model.extend({
+    var PlantModel = Backbone.Model.extend({
         url: '/organicgarden/api/locations/',
 
         initialize: function (id) {
@@ -25,5 +25,5 @@ define([
         }
     });
 
-    return LocationModel;
+    return PlantModel;
 });

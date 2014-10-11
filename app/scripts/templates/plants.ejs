@@ -1,13 +1,13 @@
 <div class="row">
     <div class="small-12 columns">
-        <h4>Мої ділянки</h4>
+        <h4>My plants</h4>
     </div>
 </div>
 <div class="row">
     <div class="small-12 columns">
         <ul>
-            <% for(var i=0; i<models.length; i++) {%>
-            <a href="#location/<%= models[i].id %>">
+            <% for(var i=0; i<models.length-1; i++) {%>
+            <a href="#plants/<%= models[i].id %>">
                 <li class="location" id="<%= models[i].id %>">
                     <div class="row">
                         <div class="small-5 medium-2 large-2 columns">
@@ -25,6 +25,6 @@
 </div>
 <div class="row">
     <div class="small-12 columns text-right">
-        <a href="#location/add" class="button button-action add-location">Додати ділянку</a>
+        <a href="" class="button button-action add-location">Add plant</a>
     </div>
 </div>

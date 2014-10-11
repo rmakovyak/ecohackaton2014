@@ -9,7 +9,7 @@ define([
     'use strict';
 
     var LocationsView = Backbone.View.extend({
-        template: JST['app/scripts/templates/locations.ejs'],
+        template: JST['app/scripts/templates/plants.ejs'],
 
         tagName: 'div',
 
@@ -18,7 +18,6 @@ define([
         className: '',
 
         events: {
-            "click .add-location": "addLocation"
         },
 
         initialize: function () {

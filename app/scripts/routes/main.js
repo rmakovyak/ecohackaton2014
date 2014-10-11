@@ -3,44 +3,36 @@
 define([
     'jquery',
     'backbone',
-    'views/location',
-    'views/locations',
-    'views/location-add',
-    'collections/locations',
-    'models/location'
-], function ($, Backbone, LocationView, LocationsView, AddLocationView, LocationsCollection, LocationModel) {
+    'views/plant',
+    'views/plants',
+    'collections/plants',
+    'models/plant'
+], function ($, Backbone, PlantView, PlantsView, PlantsCollection, PlantModel) {
     'use strict';
 
     var MainRouter = Backbone.Router.extend({
         routes: {
-            "": "locations",
-            "locations": "locations",
-            "location/add": "addLocation",
-            "location/:id": "location"
+            "": "plants",
+            "plants": "plants",
+            "plants/:id": "plant"
         },
 
-        locations: function() {
-            this.locationsCollection = new LocationsCollection();
-            this.locationsView =  new LocationsView( { model: this.locationsCollection } );
+        plants: function() {
+            this.plantsCollection = new PlantsCollection();
+            this.plantsView =  new PlantsView( { model: this.plantsCollection } );
 
-            $( ".container" ).html( this.locationsView.el );
+            $( ".container" ).html( this.plantsView.el );
 
-            this.locationsCollection.fetch();
+            this.plantsCollection.fetch();
         },
 
-        addLocation: function() {
-            this.locationModel = new LocationModel();
-            this.addLocationView = new AddLocationView( { model: this.locationModel } );
-            $( ".container" ).html( this.addLocationView.render().el );
-        },
+        plant: function( id ) {
+            this.plantModel =  new PlantModel();
+            this.plantView =  new PlantView( { model: this.plantModel } );
 
-        location: function (id) {
-            this.locationModel = new LocationModel(id);
-            this.locationView = new LocationView({ model: this.locationModel });
+            $( ".container" ).html( this.plantView.render().el );
 
-            $('.container').html( this.locationView.el );
-
-            this.locationModel.fetch();
+            // this.plantModel.fetch();
         }
 
     });
