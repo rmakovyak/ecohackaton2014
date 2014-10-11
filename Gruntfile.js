@@ -68,6 +68,7 @@ module.exports = function (grunt) {
                     context: '/organicgarden/api',
                     host: '192.168.100.187',
                     port: 8080,
+                    https: false,
                     changeOrigin: true
                 }
             ],

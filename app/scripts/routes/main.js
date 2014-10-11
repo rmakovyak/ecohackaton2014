@@ -14,10 +14,12 @@ define([
         },
 
         locations: function() {
-            var locationsCollection = new LocationsCollection();
-            var locationsView =  new LocationsView( { model: locationsCollection } );
+            this.locationsCollection = new LocationsCollection();
+            this.locationsView =  new LocationsView( { model: this.locationsCollection } );
 
-            $( ".container" ).html( locationsView.render().el );
+            $( ".container" ).html( this.locationsView.el );
+
+            this.locationsCollection.fetch();
         }
 
     });

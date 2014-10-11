@@ -6,15 +6,18 @@
 <div class="row">
     <div class="small-12 columns">
         <ul>
-            <li>
-                Ділянка №1
+            <% for(var i=0; i<models.length; i++) {%>
+            <li id="<%= models[i].id %>">
+                <div class="row">
+                    <div class="small-2 columns">
+                        <img class="location-img" src="images/garden<%= i+1 %>.jpg"/>
+                    </div>
+                    <div class="small-10 columns">
+                        <p class="location-title"><%= models[i].name %></p>
+                    </div>
+                </div>
             </li>
-            <li>
-                Ділянка №2
-            </li>
-            <li>
-                Ділянка №3
-            </li>
+            <% } %>
         </ul>
     </div>
 </div>

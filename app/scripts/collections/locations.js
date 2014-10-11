@@ -8,6 +8,7 @@ define([
     'use strict';
 
     var LocationsCollection = Backbone.Collection.extend({
+        url: 'http://localhost:9000/organicgarden/api/locations',
         model: LocationsModel
     });
 
