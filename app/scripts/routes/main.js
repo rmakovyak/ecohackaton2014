@@ -13,6 +13,11 @@ define([
     'use strict';
 
     var MainRouter = Backbone.Router.extend({
+        initialize: function(){
+            this.on( "route", function(){
+            });
+        },
+
         routes: {
             "": "plants",
             "plants": "plants",
@@ -24,30 +29,43 @@ define([
             this.plantsCollection = new PlantsCollection();
             this.plantsView =  new PlantsView( { model: this.plantsCollection } );
 
-            $( ".container" ).html( this.plantsView.el );
+            var that = this;
+
+            $( ".container" ).animate( { left: "-2000px" }, function() {
+                $( ".container" ).html( that.plantsView.el ).animate( { left: "0px" }, "slow" );
+            });
 
             this.plantsCollection.fetch();
         },
 
         plant: function( id ) {
-            this.plantModel =  new PlantModel();
+            this.plantModel =  new PlantModel( id );
             this.plantView =  new PlantView( { model: this.plantModel } );
 
-            $( ".container" ).html( this.plantView.render().el );
+            var that = this;
 
-            // this.plantModel.fetch();
+            $( ".container" ).animate( { left: "-2000px" }, function() {
+                $( ".container" ).html( that.plantView.el ).animate( { left: "0px" }, "slow" );
+            });
+
+            this.plantModel.fetch();
         },
 
         profile: function (id) {
             this.profileModel = new ProfileModel(id);
             this.profileView = new ProfileView({ model: this.profileModel });
 
-            $('.container').html( this.profileView.render().el );
+            var that = this;
+
+            $( ".container" ).animate( { left: "-2000px" }, function() {
+                $( ".container" ).html( that.profileView.render().el ).animate( { left: "0px" }, "slow" );
+            });
 
             // this.profileModel.fetch();
         }
 
     });
+
 
     return MainRouter;
 });

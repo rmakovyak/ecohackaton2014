@@ -12,6 +12,36 @@
     margin: rem-calc(30) auto;
 }
 
+#overlay {
+    display: none; /* ensures it’s invisible until it’s called */
+    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
+    left: 15%; /* positions the div half way horizontally */
+    top: 25%; /* positions the div half way vertically */
+    padding: 25px;
+    background-color: #ffffff;
+    width: 70%;
+    height: 55%;
+    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
+    text-align: center;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+#fade {
+    display: none;  /* ensures it’s invisible until it’s called */
+    position: absolute;  /* makes the div go into a position that’s absolute to the browser viewing area */
+    left: 0%; /* makes the div span all the way across the viewing area */
+    top: 0%; /* makes the div span all the way across the viewing area */
+    background-color: black;
+    -moz-opacity: 0.7; /* makes the div transparent, so you have a cool overlay effect */
+    opacity: .70;
+    filter: alpha(opacity=70);
+    width: 100%;
+    height: 100%;
+    z-index: 90; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
+}
+
 .back-button {
     border: solid 1px #8d8d8d;
     position: relative;
@@ -42,6 +72,7 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 header {
@@ -50,6 +81,11 @@ header {
     padding: 10px 0px;
     color: #fff;
     font-size: 26px;
+
+    .user-profile-link {
+        color: #fff;
+        cursor: pointer;
+    }
 }
 
 section {
@@ -86,7 +122,45 @@ ul {
     width: 80px;
     height: 80px;
     border: 2px solid gainsboro;
-    transition: border-color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease;
+}
+
+.rank {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid gainsboro;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    color: darken( gainsboro, 20% );
+    float: right;
+    margin-right: -40px;
+    span {
+        font-size: 17px;
+        display: block;
+    }
+}
+
+.notification {
+    float: right;
+    font-size: 30px !important;
+    margin-top: -20px;
+    margin-right: 10px;
+    color: $alert-color;
+}
+
+.notification-counter {
+    background: $alert-color;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+    right: 23px;
+    top: 17px;
 }
 
 .location {
@@ -109,7 +183,7 @@ ul {
 .location-title {
     margin-top:10px;
     font-size: 20px;
-    transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
     float: left;
 }
 
@@ -148,23 +222,32 @@ a {
     overflow: hidden;
 }
 
+.dismiss {
+    -webkit-transform: translate3d(100%,0,0);
+}
+
+.reveal {
+    -webkit-transform: translate3d(200%,0,0);
+}
+
+.container {
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    position: relative;
+}
+
 .action {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     margin-bottom: 5px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease-in;
-
-    &.dismiss {
-        transform: translate3d(100%,0,0);
-    }
+    -webkit-transition: background 0.2s ease, -webkit-transform 0.2s ease-in;
 
     i {
         margin-right:30px;
     }
 
-    &.pour {
+    &.water {
         border: 1px solid $info-color;
         background: lighten( $info-color, 1% );
         opacity: 0.8;
@@ -195,6 +278,34 @@ a {
         &:hover {
             background: darken( $alert-color, 10%  );
         };
+    }
+
+    &.prune {
+        border: 1px solid $mainColor;
+        background: lighten( $mainColor, 1% );
+        opacity: 0.8;
+        color: #fff;
+
+        &:hover {
+            background: darken( $mainColor, 10%  );
+        };
+    }
+
+    &.clean {
+        border: 1px solid #A3A3A3;
+        background: lighten( #A3A3A3, 1% );
+        opacity: 0.8;
+        color: #fff;
+
+        &:hover {
+            background: darken( #A3A3A3, 10%  );
+        };
+    }
+}
+
+.guide {
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 /* Profile view */
@@ -235,3 +346,4 @@ a {
         text-transform: capitalize;
     }
 }
+

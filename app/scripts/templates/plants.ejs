@@ -6,16 +6,20 @@
 <div class="row">
     <div class="small-12 columns">
         <ul>
-            <% for(var i=0; i<models.length-1; i++) {%>
+            <% for(var i=0; i<models.length; i++) {%>
             <a href="#plants/<%= models[i].id %>">
                 <li class="location">
                     <div class="row">
-                        <div class="small-5 medium-2 large-2 columns">
+                        <div class="small-4 medium-2 large-2 columns" style="padding-right:0px">
                             <img class="location-img" src="images/<%= models[i].imageUrl %>"/>
                         </div>
-                        <div class="small-7 medium-10 large-10 columns">
+                        <div class="small-8 medium-10 large-10 columns" style="padding-left:5px">
                             <span class="location-title"><%= models[i].name %></span>
                             <span class="subtitle"><%= models[i].type %></span>
+                            <% if ( models[i].actionList.length ){ %>
+                                <i class="fa fa-bell-o notification"></i>
+                                <div class="notification-counter"><%=models[i].actionList.length%></div>
+                            <%}%>
                         </div>
                     </div>
                 </li>

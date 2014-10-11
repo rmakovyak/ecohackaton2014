@@ -7,7 +7,7 @@ define([
     'use strict';
 
     var PlantModel = Backbone.Model.extend({
-        url: '/organicgarden/api/locations/',
+        url: '/organicgarden/api/plants/',
 
         initialize: function (id) {
             this.url = this.url + id;

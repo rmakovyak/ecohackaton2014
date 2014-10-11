@@ -26,6 +26,7 @@ define([
         },
 
         render: function () {
+            console.log(this.model.toJSON());
             this.$el.html(this.template( { model: this.model.toJSON() } ));
             return this;
         },
@@ -35,6 +36,13 @@ define([
 
             setTimeout( function(){
                 $( e.currentTarget ).remove();
+                $( "#fade" ).css( { "display": "block" } );
+                $( "#overlay" ).css( { "display": "block" } );
+                $( "#overlay" ).html( "<p>Achievment unlocked.</p><img src='images/badge_pour.svg'/><p>You have watered 10 times.</p><button class='button-action modal-dismiss'>Thanks</button>" );
+                $( ".modal-dismiss" ).click( function() {
+                    $( "#fade" ).css( { "display": "none" } );
+                    $( "#overlay" ).css( { "display": "none" } );
+                });
             }, 300 );
         }
     });
