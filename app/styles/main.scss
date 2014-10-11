@@ -132,3 +132,36 @@ a {
     font-style: italic;
     color: #8d8d8d;
 }
+
+.plant-container {
+    border-top: 1px solid gainsboro;
+}
+
+.action {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+
+    &.pour {
+        border: 1px solid $info-color;
+        background: lighten( $info-color, 1% );
+        opacity: 0.8;
+        color: #fff;
+    }
+
+    &.fertilize {
+        border: 1px solid $warning-color;
+        background: lighten( $warning-color, 1% );
+        opacity: 0.8;
+        color: #fff;
+    }
+
+    &.cut {
+        border: 1px solid $alert-color;
+        background: lighten( $alert-color, 1% );
+        opacity: 0.8;
+        color: #fff;
+    }
+}
