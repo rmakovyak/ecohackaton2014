@@ -5,16 +5,19 @@ define([
     'backbone',
     'views/plant',
     'views/plants',
+    'views/profile',
     'collections/plants',
-    'models/plant'
-], function ($, Backbone, PlantView, PlantsView, PlantsCollection, PlantModel) {
+    'models/plant',
+    'models/profile'
+], function ($, Backbone, PlantView, PlantsView, ProfileView, PlantsCollection, PlantModel, ProfileModel) {
     'use strict';
 
     var MainRouter = Backbone.Router.extend({
         routes: {
             "": "plants",
             "plants": "plants",
-            "plants/:id": "plant"
+            "plants/:id": "plant",
+            "user/:id": 'profile'
         },
 
         plants: function() {
@@ -33,6 +36,15 @@ define([
             $( ".container" ).html( this.plantView.render().el );
 
             // this.plantModel.fetch();
+        },
+
+        profile: function (id) {
+            this.profileModel = new ProfileModel(id);
+            this.profileView = new ProfileView({ model: this.profileModel });
+
+            $('.container').html( this.profileView.render().el );
+
+            // this.profileModel.fetch();
         }
 
     });

@@ -132,3 +132,42 @@ a {
     font-style: italic;
     color: #8d8d8d;
 }
+
+/* Profile view */
+.avatar {
+    display: block;
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+    background: url(../images/dummy_profile.jpg);
+}
+
+.user-email input {
+    max-width: 260px;
+}
+
+.row.profile-top {
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 20px;
+}
+
+.row.achievements {
+    margin-top: 20px;
+
+    .list {
+        margin: 20px 0 0;
+    }
+}
+
+.achievement {
+    border: none;
+    text-align: center;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .name {
+        text-transform: capitalize;
+    }
+}
