@@ -1,0 +1,48 @@
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <h4><%= location.name %></h4>
+        <ul>
+            <li>
+                <div class="row location-property">
+                    <div class="small-7 columns">Температура:</div>
+                    <div class="small-5 columns value text-center">
+                        <p><%= location.temperature %> &#8451;</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row location-property">
+                    <div class="small-7 columns">Вологість:</div>
+                    <div class="small-5 columns value text-center">
+                        <p><%= location.humidity %> %</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row location-property">
+                    <div class="small-7 columns">Кислотність:</div>
+                    <div class="small-5 columns value text-center">
+                        <p><%= location.acidity %> Ph</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row location-property">
+                    <div class="small-7 columns">Освітленість:</div>
+                    <div class="small-5 columns value text-center">
+                        <p><%= location.illumination %> lux</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="small-12 medium-4 columns">
+        <h4>Рослини:</h4>
+        <ul>
+            <li class="plant">Помідор <i class="fa fa-plus-circle"></i></li>
+            <li class="plant">Огірок <i class="fa fa-plus-circle"></i></li>
+            <li class="plant">Салат <i class="fa fa-plus-circle"></i></li>
+        </ul>
+    </div>
+</div>
