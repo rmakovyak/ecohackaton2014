@@ -17,7 +17,9 @@ define([
 
         className: '',
 
-        events: {},
+        events: {
+            "click .action": "actionDismiss"
+        },
 
         initialize: function () {
             this.listenTo(this.model, 'sync', this.render);
@@ -26,6 +28,14 @@ define([
         render: function () {
             this.$el.html(this.template( { model: this.model.toJSON() } ));
             return this;
+        },
+
+        actionDismiss: function( e ) {
+            $( e.currentTarget ).addClass( "dismiss" );
+
+            setTimeout( function(){
+                $( e.currentTarget ).remove();
+            }, 300 );
         }
     });
 

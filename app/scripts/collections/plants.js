@@ -8,7 +8,7 @@ define([
     'use strict';
 
     var PlantsCollection = Backbone.Collection.extend({
-        url: 'organicgarden/api/locations',
+        url: 'organicgarden/api/plants/available',
         model: PlantModel
     });
 
