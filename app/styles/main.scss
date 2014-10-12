@@ -347,3 +347,24 @@ a {
     }
 }
 
+/* Login view */
+.login-container {
+    text-align: center;
+
+    h4 {
+        margin: 0 0 20px;
+    }
+}
+
+ul.login-btns {
+    border-bottom: none;
+}
+
+.login-btn {
+    text-transform: capitalize;
+    color: #fff;
+
+    &.facebook {
+        background: #254575;
+    }
+}

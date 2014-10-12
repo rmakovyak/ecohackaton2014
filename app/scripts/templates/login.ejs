@@ -1,0 +1,8 @@
+<div class="row login-container">
+    <h4>Login with:</h4>
+    <ul class="login-btns small-12 columns text-center">
+        <% for(var i=0; i<loginOptions.length; i++) {%>
+            <li class="small-10 medium-4 button-action login-btn <%= loginOptions[i] %>"><%= loginOptions[i] %></li>
+        <% } %>
+    </ul>
+</div>

@@ -6,10 +6,13 @@ define([
     'views/plant',
     'views/plants',
     'views/profile',
+    'views/login',
     'collections/plants',
     'models/plant',
-    'models/profile'
-], function ($, Backbone, PlantView, PlantsView, ProfileView, PlantsCollection, PlantModel, ProfileModel) {
+    'models/profile',
+    'config/login-options'
+], function ($, Backbone, PlantView, PlantsView, ProfileView, LoginView, PlantsCollection, PlantModel, ProfileModel, LoginOptions) {
+
     'use strict';
 
     var MainRouter = Backbone.Router.extend({
@@ -26,16 +29,40 @@ define([
         },
 
         plants: function() {
-            this.plantsCollection = new PlantsCollection();
-            this.plantsView =  new PlantsView( { model: this.plantsCollection } );
+            var _this = this;
 
-            var that = this;
+            var checkLogin = function() {
+                FB.getLoginStatus(function (response) {
+                    if (response.status === 'connected') {
+                        _this.plantsCollection = new PlantsCollection();
+                        _this.plantsView =  new PlantsView( { model: _this.plantsCollection } );
 
-            $( ".container" ).animate( { left: "-2000px" }, function() {
-                $( ".container" ).html( that.plantsView.el ).animate( { left: "0px" }, "slow" );
-            });
+                        $( ".container" ).animate( { left: "-2000px" }, function() {
+                            $( ".container" ).html( _this.plantsView.el ).animate( { left: "0px" }, "slow" );
+                        });
 
-            this.plantsCollection.fetch();
+                        _this.plantsCollection.fetch();
+
+                        _this.header();
+                    } else {
+                        _this.loginView = new LoginView({ model: LoginOptions });
+
+                        $( ".container" ).html( _this.loginView.render().el );
+                    }
+                });
+            };
+
+            if (window['FB']) { checkLogin(); }
+
+            window.fbAsyncInit = function() {
+                FB.init({
+                  appId      : '275327142665469',
+                  xfbml      : true,
+                  version    : 'v2.1'
+                });
+
+                checkLogin();
+            };
         },
 
         plant: function( id ) {
