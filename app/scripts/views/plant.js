@@ -11,6 +11,7 @@ define([
 
     var LocationView = Backbone.View.extend({
         template: JST['app/scripts/templates/plant.ejs'],
+        adTemplate: JST['app/scripts/templates/ad.ejs'],
 
         tagName: 'div',
 
@@ -19,7 +20,8 @@ define([
         className: '',
 
         events: {
-            "click .action": "actionDismiss"
+            "click .action": "actionDismiss",
+            "click .ad": "showAdvertisment"
         },
 
         initialize: function () {
@@ -76,7 +78,21 @@ define([
                     $( "#overlay" ).css( { "display": "none" } );
                 });
             }, 300 );
+        },
+
+        showAdvertisment: function() {
+            $( "#fade" ).css( { "display": "block" } );
+            $( "#overlay" ).css( { "display": "block" } );
+            setTimeout(function() {
+                $( "#overlay" ).addClass('animate');
+            }, 10);
+            $( "#overlay" ).html( this.adTemplate() );
+            $( ".modal-dismiss" ).click( function() {
+                $( "#fade" ).css( { "display": "none" } );
+                $( "#overlay" ).css( { "display": "none" } );
+            });
         }
+
     });
 
     return LocationView;

@@ -46,8 +46,13 @@ define([
             // Also getting the day of the week.    //
             //////////////////////////////////////////
 
-            var tempDate = new Date(tempMonth + ' 1 ,' + year);
+            // var tempDate = new Date(tempMonth + '-1-' + year);
+            var tempDate = new Date();
+            tempDate.setDate(1);
+            tempDate.setMonth(tempMonth);
+            tempDate.setFullYear(year)
             var tempweekday = tempDate.getDay();
+            console.log( tempMonth );
             var tempweekday2 = tempweekday;
             var dayAmount = totalDays[month];
             // var preAmount = totalDays[prevMonth] - tempweekday + 1;
@@ -77,7 +82,6 @@ define([
                 //////////////////////////////////////////
                 // Determining when to start a new row  //
                 //////////////////////////////////////////
-
                 if (tempweekday2 > 6) {
                     tempweekday2 = 0;
                     padding += "</tr><tr>";
@@ -110,6 +114,7 @@ define([
             var calendarTable = "<table class='calendar'> <tr class='currentmonth'><th colspan='7'>" + monthNames[month] + " " + year + "</th></tr>";
             calendarTable += "<tr class='weekdays'>  <td>Sun</td>  <td>Mon</td> <td>Tues</td> <td>Wed</td> <td>Thurs</td> <td>Fri</td> <td>Sat</td> </tr>";
             calendarTable += "<tr>";
+            console.log(padding);
             calendarTable += padding;
             calendarTable += "</tr></table>";
 
