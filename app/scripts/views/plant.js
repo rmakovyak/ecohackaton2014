@@ -38,6 +38,9 @@ define([
                 $( e.currentTarget ).remove();
                 $( "#fade" ).css( { "display": "block" } );
                 $( "#overlay" ).css( { "display": "block" } );
+                setTimeout(function() {
+                    $( "#overlay" ).addClass('animate');
+                }, 10);
                 $( "#overlay" ).html( "<p>Achievment unlocked.</p><img src='images/badge_pour.svg'/><p>You have watered 10 times.</p><button class='button-action modal-dismiss'>Thanks</button>" );
                 $( ".modal-dismiss" ).click( function() {
                     $( "#fade" ).css( { "display": "none" } );
