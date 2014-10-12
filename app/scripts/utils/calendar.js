@@ -52,7 +52,6 @@ define([
             tempDate.setMonth(tempMonth);
             tempDate.setFullYear(year)
             var tempweekday = tempDate.getDay();
-            console.log( tempMonth );
             var tempweekday2 = tempweekday;
             var dayAmount = totalDays[month];
             // var preAmount = totalDays[prevMonth] - tempweekday + 1;
@@ -114,7 +113,6 @@ define([
             var calendarTable = "<table class='calendar'> <tr class='currentmonth'><th colspan='7'>" + monthNames[month] + " " + year + "</th></tr>";
             calendarTable += "<tr class='weekdays'>  <td>Sun</td>  <td>Mon</td> <td>Tues</td> <td>Wed</td> <td>Thurs</td> <td>Fri</td> <td>Sat</td> </tr>";
             calendarTable += "<tr>";
-            console.log(padding);
             calendarTable += padding;
             calendarTable += "</tr></table>";
 
