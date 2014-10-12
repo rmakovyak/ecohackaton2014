@@ -368,3 +368,100 @@ ul.login-btns {
         background: #254575;
     }
 }
+
+/*Calendar*/
+
+.currentmonth {
+    color: blue;
+    text-align: center;
+}
+.currentday {
+    border: 1px solid $mainColor;
+    text-align: center;
+}
+
+#calendar {
+    td {
+        position: relative;
+        .day-action {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            /* color: #fff; */
+            font-size: 13px;
+        }
+    }
+
+    td.water-day {
+        background: lighten( $info-color, 1% );
+        opacity: 0.8;
+        color: #fff !important;
+         &:hover {
+            background: darken( $info-color, 10%  );
+        };
+    }
+
+    td.fertilize-day {
+        background: lighten( $warning-color, 1% );
+        opacity: 0.8;
+        color: #fff !important;
+
+        &:hover {
+            background: darken( $warning-color, 10%  );
+        };
+    }
+
+    td.cut-day {
+        background: lighten( $alert-color, 1% );
+        opacity: 0.8;
+        color: #fff !important;
+
+        &:hover {
+            background: darken( $alert-color, 10%  );
+        };
+    }
+
+    td.prune-day {
+        background: lighten( $mainColor, 1% );
+        opacity: 0.8;
+        color: #fff !important;
+
+        &:hover {
+            background: darken( $mainColor, 10%  );
+        };
+    }
+
+    td.clean-day {
+        background: lighten( #A3A3A3, 1% );
+        opacity: 0.8;
+        color: #fff !important;
+
+        &:hover {
+            background: darken( #A3A3A3, 10%  );
+        };
+    }
+}
+table.calendar td, table.calendar th {
+    padding:.7em;
+}
+table.calendar {
+    display:inline-block;
+    *display:inline; zoom:1;
+    vertical-align:top;
+}
+
+.weekdays {
+    td {
+        background: $mainColor !important;
+        color: #fff !important;
+    }
+}
+
+.currentmonth {
+    color: #222 !important;
+    cursor: pointer;
+    &:hover{
+        background: $mainColor;
+        color: #fff !important;
+    };
+}

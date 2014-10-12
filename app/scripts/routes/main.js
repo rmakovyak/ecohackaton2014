@@ -69,6 +69,8 @@ define([
             this.plantModel =  new PlantModel( id );
             this.plantView =  new PlantView( { model: this.plantModel } );
 
+            this.plantModel.set( "actionList", {} );
+
             var that = this;
 
             $( ".container" ).animate( { left: "-2000px" }, function() {

@@ -4,8 +4,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates'
-], function ($, _, Backbone, JST) {
+    'templates',
+    'utils/calendar'
+], function ($, _, Backbone, JST , calendar) {
     'use strict';
 
     var LocationView = Backbone.View.extend({
@@ -26,8 +27,36 @@ define([
         },
 
         render: function () {
-            console.log(this.model.toJSON());
             this.$el.html(this.template( { model: this.model.toJSON() } ));
+
+            var d = new Date();
+            var n = d.getMonth();
+
+            var $iconWater = "<i class='fa fa-tint day-action'></i>";
+            var $iconCut = "<i class='fa fa-cut day-action'></i>";
+            var $iconFertilize = "<i class='fa fa-eyedropper day-action'></i>";
+            var $iconPrune = "<i class='fa fa-bug day-action'></i>";
+
+            var calendarHTML = calendar.generate( n );
+
+            this.$el.find( "#calendar" ).html( calendarHTML );
+
+            this.$el.find( "#calendar" ).find( "#15" )
+                .addClass( "water-day" )
+                .append( $iconWater );
+
+            this.$el.find( "#calendar" ).find( "#21" )
+                .addClass( "cut-day" )
+                .append( $iconCut );
+
+            this.$el.find( "#calendar" ).find( "#30" )
+                .addClass( "fertilize-day" )
+                .append( $iconFertilize );
+
+            this.$el.find( "#calendar" ).find( "#28" )
+                .addClass( "prune-day" )
+                .append( $iconPrune );
+
             return this;
         },
 
