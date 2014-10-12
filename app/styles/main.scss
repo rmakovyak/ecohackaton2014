@@ -170,6 +170,38 @@ ul {
     top: 17px;
 }
 
+.new-badge {
+    background: #f04124;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+    right: 42px;
+    top: 0px;
+    padding: 3px;
+}
+
+.user-rank {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid gainsboro;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    position: absolute;
+    right: 45px;
+    color: $mainColor;
+    border-color: $mainColor;
+    span {
+        font-size: 17px;
+        display: block;
+    }
+}
+
 .location {
     cursor: pointer;
     &:hover {

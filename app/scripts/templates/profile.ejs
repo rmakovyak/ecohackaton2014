@@ -6,14 +6,21 @@
         <h4><%= user.name %></h4>
         <p><strong>Email:</strong> <%= user.email %></p>
     </div>
+    <div class="user-rank">
+        23
+        <span>points</span>
+    </div>
 </div>
 <div class="row achievements">
     <h4>Achievements:</h4>
     <ul class="small-block-grid-2 medium-block-grid-5 list">
         <% for(var i=0; i<user.achievements.length; i++) {%>
-            <li class="achievement">
+            <li class="achievement" style="position:relative">
                 <img src="/images/badge_<%= user.achievements[i] %>.svg" alt="" />
                 <span class="name"><%= user.achievements[i] %></span>
+                <% if( i === 2 ) {%>
+                    <div class="new-badge">New</div>
+                <%}%>
             </li>
         <% } %>
     </ul>

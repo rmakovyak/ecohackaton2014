@@ -29,8 +29,8 @@ define([
                 name: 'John Doe',
                 avatar: '',
                 email: 'john.doe@gmail.com',
-                achievements: ['plant', 'pour', 'grow']
-            };
+                achievements: ['plant', 'grow', 'pour']
+            }
 
             // this.$el.html(this.template( { user: this.model.toJSON() } ));
             this.$el.html(this.template( { user: mock } ));
