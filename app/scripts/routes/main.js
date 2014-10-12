@@ -18,6 +18,7 @@ define([
     var MainRouter = Backbone.Router.extend({
         initialize: function(){
             this.on( "route", function(){
+                $( "html, body" ).animate( { scrollTop: 0 }, "fast" );
             });
         },
 
