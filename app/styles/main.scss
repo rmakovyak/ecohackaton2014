@@ -34,6 +34,11 @@
         display: block;
         margin: 0 auto;
     }
+
+    &.recomendation {
+        top: 5%;
+        height: 90%;
+    }
 }
 #fade {
     display: none;  /* ensures it’s invisible until it’s called */
