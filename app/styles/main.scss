@@ -453,7 +453,8 @@ table.calendar td, table.calendar th {
 }
 table.calendar {
     display:inline-block;
-    *display:inline; zoom:1;
+    display:inline;
+    zoom:1;
     vertical-align:top;
 }
 
