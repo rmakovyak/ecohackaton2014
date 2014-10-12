@@ -84,12 +84,12 @@ define([
             $( "#fade" ).css( { "display": "block" } );
             $( "#overlay.recomendation" ).css( { "display": "block" } );
             setTimeout(function() {
-                $( "#overlay..recomendation" ).addClass('animate');
+                $( "#overlay.recomendation" ).addClass('animate');
             }, 10);
-            $( "#overlay..recomendation" ).html( this.adTemplate() );
+            $( "#overlay.recomendation" ).html( this.adTemplate() );
             $( ".modal-dismiss" ).click( function() {
                 $( "#fade" ).css( { "display": "none" } );
-                $( "#overlay..recomendation" ).css( { "display": "none" } );
+                $( "#overlay.recomendation" ).css( { "display": "none" } );
             });
         }
 
