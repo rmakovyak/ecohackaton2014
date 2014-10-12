@@ -42,8 +42,6 @@ define([
                         });
 
                         _this.plantsCollection.fetch();
-
-                        _this.header();
                     } else {
                         _this.loginView = new LoginView({ model: LoginOptions });
 

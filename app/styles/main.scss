@@ -23,6 +23,13 @@
     height: 55%;
     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
     text-align: center;
+    -webkit-transform: rotate(-10deg);
+    -webkit-transition: -webkit-transform 400ms cubic-bezier(.39,1.55,.89,1.05);
+    -webkit-transform-origin: 50% 5px;
+
+    &.animate {
+        -webkit-transform: rotate(0deg);
+    }
     img {
         display: block;
         margin: 0 auto;
