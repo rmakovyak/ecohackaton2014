@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 @import "settings";
+@import "foundation/scss/foundation";
 @import "foundation/scss/normalize";
-
-@import "foundation";
 
 .loader {
     background-image: url(../images/ajax-loader.gif);

@@ -32,9 +32,9 @@ define([
         plants: function() {
             var _this = this;
 
-            var checkLogin = function() {
-                FB.getLoginStatus(function (response) {
-                    if (response.status === 'connected') {
+            // var checkLogin = function() {
+            //     FB.getLoginStatus(function (response) {
+            //         if (response.status === 'connected') {
                         _this.plantsCollection = new PlantsCollection();
                         _this.plantsView =  new PlantsView( { model: _this.plantsCollection } );
 
@@ -43,25 +43,25 @@ define([
                         });
 
                         _this.plantsCollection.fetch();
-                    } else {
-                        _this.loginView = new LoginView({ model: LoginOptions });
+            //         } else {
+            //             _this.loginView = new LoginView({ model: LoginOptions });
 
-                        $( ".container" ).html( _this.loginView.render().el );
-                    }
-                });
-            };
+            //             $( ".container" ).html( _this.loginView.render().el );
+            //         }
+            //     });
+            // };
 
-            if (window['FB']) { checkLogin(); }
+            // if (window['FB']) { checkLogin(); }
 
-            window.fbAsyncInit = function() {
-                FB.init({
-                  appId      : '275327142665469',
-                  xfbml      : true,
-                  version    : 'v2.1'
-                });
+            // window.fbAsyncInit = function() {
+            //     FB.init({
+            //       appId      : '275327142665469',
+            //       xfbml      : true,
+            //       version    : 'v2.1'
+            //     });
 
-                checkLogin();
-            };
+            //     checkLogin();
+            // };
         },
 
         plant: function( id ) {
