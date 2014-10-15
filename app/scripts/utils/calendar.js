@@ -6,7 +6,7 @@ define([
 ], function ($, _) {
     'use strict';
 
-    var utils = {
+    var Calendar = {
         generate: function( month ) {
             //Variables to be used later.  Place holders right now.
             var padding = "";
@@ -120,6 +120,6 @@ define([
         }
     }
 
-    return utils;
+    return Calendar;
 
 });

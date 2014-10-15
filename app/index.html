@@ -7,9 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+        
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
@@ -20,16 +18,14 @@
         <!-- Include the compiled Ratchet CSS -->
         <link href="bower_components/ratchet/dist/css/ratchet.css" rel="stylesheet">
         <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.css" rel="stylesheet">
-        <!-- Include the compiled Ratchet JS -->
-        <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+       
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <header class="bar bar-nav" style="position:relative">
-          <h1 class="title">Planter</h1>
+            <h1 class="title">Planter</h1>
         </header>
 
 
@@ -72,5 +68,8 @@
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
+
+         <!-- Include the compiled Ratchet JS -->
+        <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
 </body>
 </html>

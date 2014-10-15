@@ -1,4 +1,48 @@
-<div class="row">
+<header class="bar bar-nav">
+  <a class="icon icon-left-nav pull-left" href="#plants"></a>
+  <a class="icon icon-compose pull-right"></a>
+  <h1 class="title">{{model.name}}</h1>
+</header>
+<div class="plant page">
+    <div class="teaser">
+        <div class="info">
+            <h3>{{model.name}}</h3>
+            <span>{{model.type}}</span>
+        </div>
+        <img class="location-img" src="images/{{model.imageUrl}}"/>
+        <div class="clearfix"></div>
+    </div>
+    <div class="block notifications">
+        <h5>Notifications</h5>
+        <span>ON/OFF</span>
+        <div class="toggle active">
+          <div class="toggle-handle"></div>
+        </div>
+    </div>
+    <div class="block recomendations">
+        <h5>Recomedations</h5>
+        <button class="btn btn-block open-modal">Modal example</button>
+    </div>
+    <div class="block">
+        <h5>Guide</h5>
+        <div class="guide">
+           {{model.description}}
+        </div>
+    </div>
+</div>
+
+{{!-- <a href="#myModalexample" class="btn">Open modal</a> --}}
+<div class="modal">
+  <header class="bar bar-nav">
+    <a class="icon icon-close pull-right dismiss-modal"></a>
+    <h1 class="title">Modal</h1>
+  </header>
+
+  <div class="content">
+    <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+  </div>
+</div>
+{{!-- <div class="row">
     <div class="small-2 medium-8 large-8 columns">
         <h4>{{name}}</h4>
         <span class="subtitle">{{type}}</span>
@@ -35,4 +79,4 @@
                {{description}}
             </div>
     </div>
-</div>
+</div> --}}

@@ -3,6 +3,7 @@
 define([
     'jquery',
     'backbone',
+    'utils/presenter',
     'views/plant',
     'views/plants',
     'views/profile',
@@ -11,15 +12,13 @@ define([
     'models/plant',
     'models/profile',
     'config/login-options'
-], function ($, Backbone, PlantView, PlantsView, ProfileView, LoginView, PlantsCollection, PlantModel, ProfileModel, LoginOptions) {
+], function ($, Backbone, Presenter, PlantView, PlantsView, ProfileView, LoginView, PlantsCollection, PlantModel, ProfileModel, LoginOptions) {
 
     'use strict';
 
     var MainRouter = Backbone.Router.extend({
         initialize: function(){
-            this.on( "route", function(){
-                $( "html, body" ).animate( { scrollTop: 0 }, "fast" );
-            });
+            
         },
 
         routes: {
@@ -38,9 +37,7 @@ define([
                         _this.plantsCollection = new PlantsCollection();
                         _this.plantsView =  new PlantsView( { model: _this.plantsCollection } );
 
-                        $( ".container" ).animate( { left: "-2000px" }, function() {
-                            $( ".container" ).html( _this.plantsView.el ).animate( { left: "0px" }, "slow" );
-                        });
+                        Presenter.show( $( ".container" ), _this.plantsView.el );
 
                         _this.plantsCollection.fetch();
             //         } else {
@@ -69,12 +66,8 @@ define([
             this.plantView =  new PlantView( { model: this.plantModel } );
 
             this.plantModel.set( "actionList", {} );
-
-            var that = this;
-
-            $( ".container" ).animate( { left: "-2000px" }, function() {
-                $( ".container" ).html( that.plantView.el ).animate( { left: "0px" }, "slow" );
-            });
+           
+            Presenter.show( $( ".container" ), this.plantView.el );
 
             this.plantModel.fetch();
         },
@@ -82,12 +75,8 @@ define([
         profile: function (id) {
             this.profileModel = new ProfileModel(id);
             this.profileView = new ProfileView({ model: this.profileModel });
-
-            var that = this;
-
-            $( ".container" ).animate( { left: "-2000px" }, function() {
-                $( ".container" ).html( that.profileView.render().el ).animate( { left: "0px" }, "slow" );
-            });
+    
+            Presenter.show( $( ".container" ), this.profileView.el );
 
             // this.profileModel.fetch();
         }
