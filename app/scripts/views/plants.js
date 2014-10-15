@@ -9,7 +9,7 @@ define([
     'use strict';
 
     var LocationsView = Backbone.View.extend({
-        template: JST['app/scripts/templates/plants.hbs'],
+        template: JST['app/scripts/templates/plants.ejs'],
 
         tagName: 'div',
 
