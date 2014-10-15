@@ -50,11 +50,11 @@ module.exports = function (grunt) {
                     'test/spec/**/*.js'
                 ]
             },
-            jst: {
+            handlebars: {
                 files: [
-                    '<%= yeoman.app %>/scripts/templates/*.ejs'
+                    '<%= yeoman.app %>/scripts/templates/*.hbs'
                 ],
-                tasks: ['jst']
+                tasks: ['handlebars']
             }
         },
         connect: {
@@ -166,7 +166,8 @@ module.exports = function (grunt) {
                         'templates': '../../.tmp/scripts/templates',
                         'jquery': '../../<%= yeoman.app %>/bower_components/jquery/dist/jquery',
                         'underscore': '../../<%= yeoman.app %>/bower_components/lodash/dist/lodash',
-                        'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone'
+                        'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone',
+                        'handlebars': '../../<%= yeoman.app %>/bower_components/handlebars/handlebars',
                     },
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
@@ -259,13 +260,13 @@ module.exports = function (grunt) {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
         },
-        jst: {
-            options: {
-                amd: true
-            },
+        handlebars: {
             compile: {
+                options: {
+                    amd: true
+                },
                 files: {
-                    '.tmp/scripts/templates.js': ['<%= yeoman.app %>/scripts/templates/*.ejs']
+                    '.tmp/scripts/templates.js': ['<%= yeoman.app %>/scripts/templates/*.hbs']
                 }
             }
         },
@@ -303,7 +304,7 @@ module.exports = function (grunt) {
                 'clean:server',
                 'configureProxies',
                 'createDefaultTemplate',
-                'jst',
+                'handlebars',
                 'compass:server',
                 'connect:test',
                 'open:test',
@@ -315,7 +316,7 @@ module.exports = function (grunt) {
             'clean:server',
             'configureProxies',
             'createDefaultTemplate',
-            'jst',
+            'handlebars',
             'compass:server',
             'connect:livereload',
             'open:server',
@@ -328,7 +329,7 @@ module.exports = function (grunt) {
         var testTasks = [
                 'clean:server',
                 'createDefaultTemplate',
-                'jst',
+                'handlebars',
                 'compass',
                 'connect:test',
                 'mocha',
@@ -346,7 +347,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'createDefaultTemplate',
-        'jst',
+        'handlebars',
         'compass:dist',
         'useminPrepare',
         'requirejs',

@@ -1,0 +1,17 @@
+<p class="content-padded">My plants</p>
+<div class="card">
+    <ul class="table-view">
+        {{#each models}}
+            <li class="table-view-cell">
+                <a class="navigate-right">
+                  <img class="media-object pull-left location-img" src="images/{{imageUrl}}">
+                  <div class="media-body">
+                    <strong>{{name}}</strong>
+                    <p>{{type}}</p>
+                    <span class="badge badge-negative">{{actionList.length}}</span>
+                  </div>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

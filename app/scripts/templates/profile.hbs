@@ -3,8 +3,8 @@
         <img style="margin-bottom:10px;" src="" alt="" class="avatar">
     </div>
     <div class="small-12 medium-9 text-left columns user-email">
-        <h4><%= user.name %></h4>
-        <p><strong>Email:</strong> <%= user.email %></p>
+        <h4>{{user.name}}</h4>
+        <p><strong>Email:</strong> {{user.email}}</p>
     </div>
     <div class="user-rank">
         23
@@ -14,14 +14,11 @@
 <div class="row achievements">
     <h4>Achievements:</h4>
     <ul class="small-block-grid-2 medium-block-grid-5 list">
-        <% for(var i=0; i<user.achievements.length; i++) {%>
+        {{#each user.achievements}}
             <li class="achievement" style="position:relative">
                 <img src="/images/badge_<%= user.achievements[i] %>.svg" alt="" />
-                <span class="name"><%= user.achievements[i] %></span>
-                <% if( i === 2 ) {%>
-                    <div class="new-badge">New</div>
-                <%}%>
+                <span class="name">{{this}}</span>
             </li>
-        <% } %>
+        {{/each}}
     </ul>
 </div>

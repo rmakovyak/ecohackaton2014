@@ -9,7 +9,7 @@ define([
     'use strict';
 
     var ProfileView = Backbone.View.extend({
-        template: JST['app/scripts/templates/profile.ejs'],
+        template: JST['app/scripts/templates/profile.hbs'],
 
         tagName: 'div',
 
@@ -24,7 +24,7 @@ define([
         },
 
         render: function () {
-
+            console.log( "here" );
             var mock = {
                 name: 'John Doe',
                 avatar: '',

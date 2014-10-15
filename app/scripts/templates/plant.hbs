@@ -1,13 +1,13 @@
 <div class="row">
     <div class="small-2 medium-8 large-8 columns">
-        <h4><%=model.name%></h4>
-        <span class="subtitle"><%=model.type%></span>
+        <h4>{{name}}</h4>
+        <span class="subtitle">{{type}}</span>
     </div>
     <div class="small-5 medium-2 large-2 columns text-right">
-        <div class="rank" style="margin-bottom:10px"><%=model.rank%><span>points</span></div>
+        <div class="rank" style="margin-bottom:10px">{{rank}}<span>points</span></div>
     </div>
     <div class="small-5 medium-2 large-2 columns text-right">
-        <img class="location-img" style="margin-bottom:10px" src="images/<%=model.imageUrl%>"/>
+        <img class="location-img" style="margin-bottom:10px" src="images/{{imageUrl}}"/>
     </div>
 </div>
 <div class="row plant-container">
@@ -15,12 +15,7 @@
         <div class="row">
             <h5>Actions</h5>
             <div class="actions">
-                <% for(var i=0; i<model.actionList.length; i++) {%>
-                    <div class="action <%=model.actionList[i].name%>">
-                        <i class="fa fa-bell-o"></i>
-                    <span class="message">You need to <%=model.actionList[i].name%> your plant!</span>
-                </div>
-                <%}%>
+
             </div>
         </div>
         <div class="row">
@@ -37,7 +32,7 @@
     <div class="medium-6 small-12 columns">
             <h5>Guide</h5>
             <div class="guide">
-                <%=model.description%>
+               {{description}}
             </div>
     </div>
 </div>

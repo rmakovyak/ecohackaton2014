@@ -10,8 +10,8 @@ define([
     'use strict';
 
     var LocationView = Backbone.View.extend({
-        template: JST['app/scripts/templates/plant.ejs'],
-        adTemplate: JST['app/scripts/templates/ad.ejs'],
+        template: JST['app/scripts/templates/plant.hbs'],
+        adTemplate: JST['app/scripts/templates/ad.hbs'],
 
         tagName: 'div',
 

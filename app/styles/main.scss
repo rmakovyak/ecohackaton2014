@@ -1,132 +1,10 @@
 @charset "UTF-8";
 
-@import "settings";
-@import "foundation/scss/foundation";
-@import "foundation/scss/normalize";
+@import "global";
 
-.loader {
-    background-image: url(../images/ajax-loader.gif);
-    width: rem-calc(64);
-    height: rem-calc(64);
-    margin: rem-calc(30) auto;
-}
-
-#overlay {
-    display: none; /* ensures it’s invisible until it’s called */
-    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
-    left: 50%; /* positions the div half way horizontally */
-    top: 25%; /* positions the div half way vertically */
-    padding: 25px;
-    background-color: #ffffff;
-    width: 300px;
-    height: 62%;
-    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
-    text-align: center;
-    -webkit-transform: rotate(-10deg) translate3d(-50%,0,0);
-    -webkit-transition: -webkit-transform 500ms cubic-bezier(.39,1.55,.89,1.05);
-    -webkit-transform-origin: 0 5px;
-
-    &.animate {
-        -webkit-transform: rotate(0deg) translate3d(-50%,0,0);
-    }
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    &.recomendation {
-        top: 5%;
-        height: 90%;
-    }
-}
-#fade {
-    display: none;  /* ensures it’s invisible until it’s called */
-    position: absolute;  /* makes the div go into a position that’s absolute to the browser viewing area */
-    left: 0%; /* makes the div span all the way across the viewing area */
-    top: 0%; /* makes the div span all the way across the viewing area */
-    background-color: black;
-    -moz-opacity: 0.7; /* makes the div transparent, so you have a cool overlay effect */
-    opacity: .70;
-    filter: alpha(opacity=70);
-    width: 100%;
-    height: 100%;
-    z-index: 90; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
-}
-
-.back-button {
-    border: solid 1px #8d8d8d;
-    position: relative;
-    display: block;
-    height:42px;
-    width:42px;
-    margin: 0 auto;
-    -moz-border-radius:42px;
-    -webkit-border-radius:42px;
-
-    i {
-        color: #8d8d8d;
-        position: absolute;
-        left: 13px;
-        top: 3px;
-        font-size: 31px;
-    }
-
-    &:hover {
-        border-color: #8d8d8d;
-        i {
-            color: #8d8d8d;
-        }
-    }
-}
-
-body {
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-header {
-    background: $mainColor;
-    height: 50px;
-    padding: 10px 0px;
-    color: #fff;
-    font-size: 26px;
-
-    .user-profile-link {
-        color: #fff;
-        cursor: pointer;
-    }
-}
-
-section {
-    margin-top:20px;
-}
-
-img {
-    margin-top: -1px;
-}
-
-h4 {
-}
-
-.container {
-    padding: 10px;
-}
-
-ul {
-    list-style: none;
-    li{
-        padding: 10px;
-        border-top: 1px solid gainsboro;
-    }
-
-    &:last-child {
-        border-bottom: 1px solid gainsboro;
-    }
-
-    margin-left:0;
-}
+// @import "settings";
+// @import "foundation/scss/foundation";
+// @import "foundation/scss/normalize";
 
 .location-img {
     border-radius: 50%;
@@ -136,377 +14,501 @@ ul {
     -webkit-transition: border-color 0.2s ease;
 }
 
-.rank {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: 2px solid gainsboro;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 40px;
-    color: darken( gainsboro, 20% );
-    float: right;
-    margin-right: -40px;
-    span {
-        font-size: 17px;
-        display: block;
-    }
-}
+// .loader {
+//     background-image: url(../images/ajax-loader.gif);
+//     width: rem-calc(64);
+//     height: rem-calc(64);
+//     margin: rem-calc(30) auto;
+// }
 
-.notification {
-    float: right;
-    font-size: 30px !important;
-    margin-top: -20px;
-    margin-right: 10px;
-    color: $alert-color;
-}
+// #overlay {
+//     display: none; /* ensures it’s invisible until it’s called */
+//     position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
+//     left: 50%; /* positions the div half way horizontally */
+//     top: 25%; /* positions the div half way vertically */
+//     padding: 25px;
+//     background-color: #ffffff;
+//     width: 300px;
+//     height: 62%;
+//     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
+//     text-align: center;
+//     -webkit-transform: rotate(-10deg) translate3d(-50%,0,0);
+//     -webkit-transition: -webkit-transform 500ms cubic-bezier(.39,1.55,.89,1.05);
+//     -webkit-transform-origin: 0 5px;
 
-.notification-counter {
-    background: $alert-color;
-    color: #fff;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    position: absolute;
-    font-size: 10px;
-    text-align: center;
-    right: 23px;
-    top: 17px;
-}
+//     &.animate {
+//         -webkit-transform: rotate(0deg) translate3d(-50%,0,0);
+//     }
+//     img {
+//         display: block;
+//         margin: 0 auto;
+//     }
 
-.new-badge {
-    background: #f04124;
-    color: #fff;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    position: absolute;
-    font-size: 10px;
-    text-align: center;
-    right: 27px;
-    top: 0px;
-    padding: 3px;
-}
+//     &.recomendation {
+//         top: 5%;
+//         height: 90%;
+//     }
+// }
+// #fade {
+//     display: none;  /* ensures it’s invisible until it’s called */
+//     position: absolute;  /* makes the div go into a position that’s absolute to the browser viewing area */
+//     left: 0%; /* makes the div span all the way across the viewing area */
+//     top: 0%; /* makes the div span all the way across the viewing area */
+//     background-color: black;
+//     -moz-opacity: 0.7; /* makes the div transparent, so you have a cool overlay effect */
+//     opacity: .70;
+//     filter: alpha(opacity=70);
+//     width: 100%;
+//     height: 100%;
+//     z-index: 90; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
+// }
 
-.user-rank {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: 2px solid gainsboro;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 40px;
-    position: absolute;
-    right: 45px;
-    color: $mainColor;
-    border-color: $mainColor;
-    span {
-        font-size: 17px;
-        display: block;
-    }
-}
+// .back-button {
+//     border: solid 1px #8d8d8d;
+//     position: relative;
+//     display: block;
+//     height:42px;
+//     width:42px;
+//     margin: 0 auto;
+//     -moz-border-radius:42px;
+//     -webkit-border-radius:42px;
 
-.location {
-    cursor: pointer;
-    &:hover {
-        .location-img {
-            border: 2px solid $mainColor;
-        }
+//     i {
+//         color: #8d8d8d;
+//         position: absolute;
+//         left: 13px;
+//         top: 3px;
+//         font-size: 31px;
+//     }
 
-        .location-title {
-            color: $mainColor;
-        }
+//     &:hover {
+//         border-color: #8d8d8d;
+//         i {
+//             color: #8d8d8d;
+//         }
+//     }
+// }
 
-        .subtitle {
-            color: $mainColor;
-        }
-    }
-}
+// body {
+//     background-color: white;
+//     padding: 0;
+//     margin: 0;
+//     overflow-x: hidden;
+// }
 
-.location-title {
-    margin-top:10px;
-    font-size: 20px;
-    -webkit-transition: color 0.2s ease;
-    float: left;
-}
+// // header {
+// //     background: $mainColor;
+// //     height: 50px;
+// //     padding: 10px 0px;
+// //     color: #fff;
+// //     font-size: 26px;
 
-a {
-    color: #222;
-}
+// //     .user-profile-link {
+// //         color: #fff;
+// //         cursor: pointer;
+// //     }
+// // }
 
-.button-action {
-    @include button($button-med, $mainColor);
-}
+// section {
+//     margin-top:20px;
+// }
 
-/* Location view */
-.location-property {
-    .value p {
-        margin: 0;
-    }
-}
+// img {
+//     margin-top: -1px;
+// }
 
-.plant i {
-    float: right;
-    font-size: 24px;
-}
+// h4 {
+// }
 
-.subtitle {
-    font-style: italic;
-    color: #8d8d8d;
-    float: left;
-    clear:left;
-}
+// // .container {
+// //     padding: 10px;
+// // }
 
-.plant-container {
-    border-top: 1px solid gainsboro;
-}
+// ul {
+//     list-style: none;
+//     li{
+//         padding: 10px;
+//         border-top: 1px solid gainsboro;
+//     }
 
-.actions {
-    overflow: hidden;
-}
+//     &:last-child {
+//         border-bottom: 1px solid gainsboro;
+//     }
 
-.dismiss {
-    -webkit-transform: translate3d(100%,0,0);
-}
+//     margin-left:0;
+// }
 
-.reveal {
-    -webkit-transform: translate3d(200%,0,0);
-}
+// .rank {
+//     border-radius: 50%;
+//     width: 80px;
+//     height: 80px;
+//     border: 2px solid gainsboro;
+//     text-align: center;
+//     padding-top: 20px;
+//     font-size: 40px;
+//     color: darken( gainsboro, 20% );
+//     float: right;
+//     margin-right: -40px;
+//     span {
+//         font-size: 17px;
+//         display: block;
+//     }
+// }
 
-.container {
-    -webkit-transition: -webkit-transform 0.2s ease-in;
-    position: relative;
-}
+// .notification {
+//     float: right;
+//     font-size: 30px !important;
+//     margin-top: -20px;
+//     margin-right: 10px;
+//     color: $alert-color;
+// }
 
-.action {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    -webkit-transition: background 0.2s ease, -webkit-transform 0.2s ease-in;
+// .notification-counter {
+//     background: $alert-color;
+//     color: #fff;
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 50%;
+//     position: absolute;
+//     font-size: 10px;
+//     text-align: center;
+//     right: 23px;
+//     top: 17px;
+// }
 
-    i {
-        margin-right:30px;
-    }
+// .new-badge {
+//     background: #f04124;
+//     color: #fff;
+//     width: 25px;
+//     height: 25px;
+//     border-radius: 50%;
+//     position: absolute;
+//     font-size: 10px;
+//     text-align: center;
+//     right: 27px;
+//     top: 0px;
+//     padding: 3px;
+// }
 
-    &.water {
-        border: 1px solid $info-color;
-        background: lighten( $info-color, 1% );
-        opacity: 0.8;
-        color: #fff;
+// .user-rank {
+//     border-radius: 50%;
+//     width: 80px;
+//     height: 80px;
+//     border: 2px solid gainsboro;
+//     text-align: center;
+//     padding-top: 20px;
+//     font-size: 40px;
+//     position: absolute;
+//     right: 45px;
+//     color: $mainColor;
+//     border-color: $mainColor;
+//     span {
+//         font-size: 17px;
+//         display: block;
+//     }
+// }
 
-         &:hover {
-            background: darken( $info-color, 10%  );
-        };
-    }
+// .location {
+//     cursor: pointer;
+//     &:hover {
+//         .location-img {
+//             border: 2px solid $mainColor;
+//         }
 
-    &.fertilize {
-        border: 1px solid $warning-color;
-        background: lighten( $warning-color, 1% );
-        opacity: 0.8;
-        color: #fff;
+//         .location-title {
+//             color: $mainColor;
+//         }
 
-        &:hover {
-            background: darken( $warning-color, 10%  );
-        };
-    }
+//         .subtitle {
+//             color: $mainColor;
+//         }
+//     }
+// }
 
-    &.cut {
-        border: 1px solid $alert-color;
-        background: lighten( $alert-color, 1% );
-        opacity: 0.8;
-        color: #fff;
+// .location-title {
+//     margin-top:10px;
+//     font-size: 20px;
+//     -webkit-transition: color 0.2s ease;
+//     float: left;
+// }
 
-        &:hover {
-            background: darken( $alert-color, 10%  );
-        };
-    }
+// a {
+//     color: #222;
+// }
 
-    &.prune {
-        border: 1px solid $mainColor;
-        background: lighten( $mainColor, 1% );
-        opacity: 0.8;
-        color: #fff;
+// // .button-action {
+// //     @include button($button-med, $mainColor);
+// // }
 
-        &:hover {
-            background: darken( $mainColor, 10%  );
-        };
-    }
+// /* Location view */
+// .location-property {
+//     .value p {
+//         margin: 0;
+//     }
+// }
 
-    &.clean {
-        border: 1px solid #A3A3A3;
-        background: lighten( #A3A3A3, 1% );
-        opacity: 0.8;
-        color: #fff;
+// .plant i {
+//     float: right;
+//     font-size: 24px;
+// }
 
-        &:hover {
-            background: darken( #A3A3A3, 10%  );
-        };
-    }
-}
+// .subtitle {
+//     font-style: italic;
+//     color: #8d8d8d;
+//     float: left;
+//     clear:left;
+// }
 
-.guide {
-    max-height: 300px;
-    overflow-y: auto;
-}
+// .plant-container {
+//     border-top: 1px solid gainsboro;
+// }
 
-/* Profile view */
-.avatar {
-    display: block;
-    min-width: 100px;
-    width: 100px;
-    height: 100px;
-    background: url(../images/dummy_profile.jpg);
-}
+// .actions {
+//     overflow: hidden;
+// }
 
-.user-email input {
-    max-width: 260px;
-}
+// .dismiss {
+//     -webkit-transform: translate3d(100%,0,0);
+// }
 
-.row.profile-top {
-    border-bottom: 1px solid lightgrey;
-    margin-bottom: 20px;
-}
+// .reveal {
+//     -webkit-transform: translate3d(200%,0,0);
+// }
 
-.row.achievements {
-    margin-top: 20px;
+// .container {
+//     -webkit-transition: -webkit-transform 0.2s ease-in;
+//     position: relative;
+// }
 
-    .list {
-        margin: 20px 0 0;
-    }
-}
+// .action {
+//     width: 100%;
+//     padding: 10px;
+//     font-size: 16px;
+//     margin-bottom: 5px;
+//     cursor: pointer;
+//     -webkit-transition: background 0.2s ease, -webkit-transform 0.2s ease-in;
 
-.achievement {
-    border: none;
-    text-align: center;
+//     i {
+//         margin-right:30px;
+//     }
 
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-    .name {
-        text-transform: capitalize;
-    }
-}
+//     &.water {
+//         border: 1px solid $info-color;
+//         background: lighten( $info-color, 1% );
+//         opacity: 0.8;
+//         color: #fff;
 
-/* Login view */
-.login-container {
-    text-align: center;
+//          &:hover {
+//             background: darken( $info-color, 10%  );
+//         };
+//     }
 
-    h4 {
-        margin: 0 0 20px;
-    }
-}
+//     &.fertilize {
+//         border: 1px solid $warning-color;
+//         background: lighten( $warning-color, 1% );
+//         opacity: 0.8;
+//         color: #fff;
 
-ul.login-btns {
-    border-bottom: none;
-}
+//         &:hover {
+//             background: darken( $warning-color, 10%  );
+//         };
+//     }
 
-.login-btn {
-    text-transform: capitalize;
-    color: #fff;
+//     &.cut {
+//         border: 1px solid $alert-color;
+//         background: lighten( $alert-color, 1% );
+//         opacity: 0.8;
+//         color: #fff;
 
-    &.facebook {
-        background: #254575;
-    }
-}
+//         &:hover {
+//             background: darken( $alert-color, 10%  );
+//         };
+//     }
 
-/*Calendar*/
+//     &.prune {
+//         border: 1px solid $mainColor;
+//         background: lighten( $mainColor, 1% );
+//         opacity: 0.8;
+//         color: #fff;
 
-.currentmonth {
-    color: blue;
-    text-align: center;
-}
-.currentday {
-    border: 1px solid $mainColor;
-    text-align: center;
-}
+//         &:hover {
+//             background: darken( $mainColor, 10%  );
+//         };
+//     }
 
-#calendar {
-    td {
-        position: relative;
-        .day-action {
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-            /* color: #fff; */
-            font-size: 13px;
-        }
-    }
+//     &.clean {
+//         border: 1px solid #A3A3A3;
+//         background: lighten( #A3A3A3, 1% );
+//         opacity: 0.8;
+//         color: #fff;
 
-    td.water-day {
-        background: lighten( $info-color, 1% );
-        opacity: 0.8;
-        color: #fff !important;
-         &:hover {
-            background: darken( $info-color, 10%  );
-        };
-    }
+//         &:hover {
+//             background: darken( #A3A3A3, 10%  );
+//         };
+//     }
+// }
 
-    td.fertilize-day {
-        background: lighten( $warning-color, 1% );
-        opacity: 0.8;
-        color: #fff !important;
+// .guide {
+//     max-height: 300px;
+//     overflow-y: auto;
+// }
 
-        &:hover {
-            background: darken( $warning-color, 10%  );
-        };
-    }
+// /* Profile view */
+// .avatar {
+//     display: block;
+//     min-width: 100px;
+//     width: 100px;
+//     height: 100px;
+//     background: url(../images/dummy_profile.jpg);
+// }
 
-    td.cut-day {
-        background: lighten( $alert-color, 1% );
-        opacity: 0.8;
-        color: #fff !important;
+// .user-email input {
+//     max-width: 260px;
+// }
 
-        &:hover {
-            background: darken( $alert-color, 10%  );
-        };
-    }
+// .row.profile-top {
+//     border-bottom: 1px solid lightgrey;
+//     margin-bottom: 20px;
+// }
 
-    td.prune-day {
-        background: lighten( $mainColor, 1% );
-        opacity: 0.8;
-        color: #fff !important;
+// .row.achievements {
+//     margin-top: 20px;
 
-        &:hover {
-            background: darken( $mainColor, 10%  );
-        };
-    }
+//     .list {
+//         margin: 20px 0 0;
+//     }
+// }
 
-    td.clean-day {
-        background: lighten( #A3A3A3, 1% );
-        opacity: 0.8;
-        color: #fff !important;
+// .achievement {
+//     border: none;
+//     text-align: center;
 
-        &:hover {
-            background: darken( #A3A3A3, 10%  );
-        };
-    }
-}
-table.calendar td, table.calendar th {
-    padding:.6em;
-}
-table.calendar {
-    display:inline-block;
-    display:inline;
-    zoom:1;
-    vertical-align:top;
-    border: none;
-}
+//     img {
+//         display: block;
+//         margin: 0 auto;
+//     }
+//     .name {
+//         text-transform: capitalize;
+//     }
+// }
 
-.weekdays {
-    td {
-        background: $mainColor !important;
-        color: #fff !important;
-    }
-}
+// /* Login view */
+// .login-container {
+//     text-align: center;
 
-.currentmonth {
-    color: #222 !important;
-    cursor: pointer;
-    &:hover{
-        background: $mainColor;
-        color: #fff !important;
-    };
-}
+//     h4 {
+//         margin: 0 0 20px;
+//     }
+// }
+
+// ul.login-btns {
+//     border-bottom: none;
+// }
+
+// .login-btn {
+//     text-transform: capitalize;
+//     color: #fff;
+
+//     &.facebook {
+//         background: #254575;
+//     }
+// }
+
+// /*Calendar*/
+
+// .currentmonth {
+//     color: blue;
+//     text-align: center;
+// }
+// .currentday {
+//     border: 1px solid $mainColor;
+//     text-align: center;
+// }
+
+// #calendar {
+//     td {
+//         position: relative;
+//         .day-action {
+//             position: absolute;
+//             bottom: 2px;
+//             right: 2px;
+//             /* color: #fff; */
+//             font-size: 13px;
+//         }
+//     }
+
+//     td.water-day {
+//         background: lighten( $info-color, 1% );
+//         opacity: 0.8;
+//         color: #fff !important;
+//          &:hover {
+//             background: darken( $info-color, 10%  );
+//         };
+//     }
+
+//     td.fertilize-day {
+//         background: lighten( $warning-color, 1% );
+//         opacity: 0.8;
+//         color: #fff !important;
+
+//         &:hover {
+//             background: darken( $warning-color, 10%  );
+//         };
+//     }
+
+//     td.cut-day {
+//         background: lighten( $alert-color, 1% );
+//         opacity: 0.8;
+//         color: #fff !important;
+
+//         &:hover {
+//             background: darken( $alert-color, 10%  );
+//         };
+//     }
+
+//     td.prune-day {
+//         background: lighten( $mainColor, 1% );
+//         opacity: 0.8;
+//         color: #fff !important;
+
+//         &:hover {
+//             background: darken( $mainColor, 10%  );
+//         };
+//     }
+
+//     td.clean-day {
+//         background: lighten( #A3A3A3, 1% );
+//         opacity: 0.8;
+//         color: #fff !important;
+
+//         &:hover {
+//             background: darken( #A3A3A3, 10%  );
+//         };
+//     }
+// }
+// table.calendar td, table.calendar th {
+//     padding:.6em;
+// }
+// table.calendar {
+//     display:inline-block;
+//     display:inline;
+//     zoom:1;
+//     vertical-align:top;
+//     border: none;
+// }
+
+// .weekdays {
+//     td {
+//         background: $mainColor !important;
+//         color: #fff !important;
+//     }
+// }
+
+// .currentmonth {
+//     color: #222 !important;
+//     cursor: pointer;
+//     &:hover{
+//         background: $mainColor;
+//         color: #fff !important;
+//     };
+// }
