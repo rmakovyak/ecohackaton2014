@@ -1,0 +1,15 @@
+<ion-view title="My plants">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item-thumbnail-left item" ng-repeat="playlist in playlists" href="#/app/plants/{{playlist.id}}">
+        <img class="list-image" src={{playlist.image}}>
+        <h2>{{playlist.title}}</h2>
+        <p>Ficus</p>
+        <i ng-show={{playlist.notifications}} class="ion-ios7-bell-outline alert"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
