@@ -1,0 +1,36 @@
+<div class="content-block">
+
+    <div class="row">
+        <div class="plant-img">
+            <img src="http://lorempixel.com/300/300/" width="150">
+            <div class="rank">{{plant.rank}}</div>
+        </div>
+    </div>
+</div>
+
+{{#if plant.description}}
+    <div class="content-block plant-description">
+        <div class="inner">{{plant.description}}</div>
+    </div>
+{{/if}}
+
+<div class="content-block">
+    <p><a href="#" data-popup=".popup-recommendations" class="button open-popup">Recommendations</a></p>
+</div>
+
+{{#if plant.actionList}}
+    <div class="list-block">
+        <ul>
+            {{#each plant.actionList}}
+                <li class="item-content plant-action alert-text-title" data-id="{{id}}">
+                    <div class="item-inner">
+                        <div class="item-title">{{message}}</div>
+                        <div class="item-after">
+                            <div class="preloader"></div>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}

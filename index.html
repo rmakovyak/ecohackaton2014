@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Planter</title>
+
+    <link rel="stylesheet" href="/app/styles/css/main.css">
+</head>
+<body>
+
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <span class="preloader main"></span>
+
+    <div class="logo"></div>
+
+    <div class="views hidden">
+
+        <div class="view view-main navbar-fixed">
+
+            <div class="navbar theme-dark">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                    <div class="center sliding contacts-list-header">My Plants</div>
+                    <div class="right contact-add-link">
+                        <a href="#" class="link icon-only"><i class="icon icon-plus">+</i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pages">
+
+                <div data-page="list" class="page plants-list-page">
+
+                    <div class="page-content">
+                        <div class="list-block media-list plants-list">
+                            <ul></ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="toolbar tabbar">
+                <div class="toolbar-inner toolbar-bottom">
+                    <a href="/app/pages/profile.html" class="profile-link">
+                        <i class="i-icon i-icon-profile"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="login-screen">
+        <div class="page-content login-screen-content">
+            <div class="login-screen-title">Planter</div>
+            <div class="content-block">
+                <div class="button fb-login">Sign in with Facebook</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-recommendations">
+        <div class="content-block">
+            <p>Nearby places where you can buy fertilizers for you plants.</p>
+            <div class="content-block recs-list text-center"></div>
+            <p><a href="#" class="button close-popup">Close</a></p>
+        </div>
+    </div>
+
+    <script src="/bower_components/framework7/dist/js/framework7.js"></script>
+    <script src="/bower_components/requirejs/require.js" data-main="/app/lib/main"></script>
+
+</body>
+</html>

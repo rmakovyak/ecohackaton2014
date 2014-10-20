@@ -1,0 +1,18 @@
+{{#each plants}}
+    <li class="swipeout plant-item">
+        <a href="/app/pages/plant.html?id={{id}}" class="item-link item-content swipeout-content">
+            <div class="item-media plant-img"><img src="http://lorempixel.com/160/160/" width="60"></div>
+                <div class="item-inner">
+                    <div class="item-title-row">
+                        <div class="item-title">{{name}}</div>
+                        <div class="item-after"><span class="badge">{{actionList.length}}</span></div>
+                    </div>
+                    <div class="item-subtitle">{{type}}</div>
+            </div>
+        </a>
+        <div class="swipeout-actions-right">
+            <a href="#" class="bg-green edit-plant">Edit</a>
+            <a href="#" class="swipeout-delete bg-red remove-plant">Remove</a>
+        </div>
+    </li>
+{{/each}}

@@ -1,0 +1,26 @@
+{
+  "name": "planter-ios",
+  "version": "1.0.0",
+  "authors": [
+    "Roman Liutikov <roman01la@romanliutikov.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "framework7": "~0.9.7",
+    "requirejs": "~2.1.15",
+    "hbs": "~0.10.0",
+    "lodash-amd": "~2.4.1",
+    "handlebars": "~2.0.0",
+    "requirejs-text": "~2.0.12"
+  }
+}
