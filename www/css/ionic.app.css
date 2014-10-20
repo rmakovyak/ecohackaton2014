@@ -7815,8 +7815,17 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   -webkit-transition: none !important;
   transition: none !important; }
 
+body, h1 {
+  font-family: 'Open Sans', sans-serif !important; }
+
+h1 {
+  font-weight: bold; }
+
 .bar-header {
-  background: #fff !important; }
+  background: #75C167 !important;
+  border-bottom: none; }
+  .bar-header h1, .bar-header .buttons button, .bar-header .back-button {
+    color: #fff !important; }
 
 .app-logo {
   width: 150px;
@@ -7824,18 +7833,24 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   margin: 10px auto; }
 
 .pl-left-menu-container {
-  background-color: #418034;
-  /*top colour*/
-  background-image: -webkit-linear-gradient(top, #418034, #cdeeb2);
-  background-image: -moz-linear-gradient(top, #418034, #cdeeb2);
-  background-image: -o-linear-gradient(top, #418034, #cdeeb2);
-  background-image: linear-gradient(to bottom, #418034, #cdeeb2); }
+  background: #5D9A52; }
+
+.pl-menu-item {
+  padding-left: 90px; }
+
+.pl-menu-item a {
+  padding-left: 0px !important; }
 
 .pl-menu-item, .pl-menu-item .item-content {
   background: transparent;
   color: #fff;
-  border-color: #fff;
-  border-left: none; }
+  border: none; }
+  .pl-menu-item:hover, .pl-menu-item:active, .pl-menu-item .item-content:hover, .pl-menu-item .item-content:active {
+    background: #85ab7e;
+    color: #fff; }
+  .pl-menu-item i, .pl-menu-item .item-content i {
+    font-size: 25px;
+    margin-right: 10px; }
 
 i.alert {
   font-size: 35px;
@@ -7843,3 +7858,11 @@ i.alert {
   display: block;
   float: right;
   margin-top: -50px; }
+
+.photo {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid gainsboro;
+  padding: 15px;
+  box-sizing: border-box; }

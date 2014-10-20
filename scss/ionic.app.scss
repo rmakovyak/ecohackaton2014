@@ -17,12 +17,25 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+$mainColor: #75C167;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+body, h1 {
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+h1 {
+	font-weight: bold;
+}
+
 .bar-header {
-	background: #fff !important;
+	background: $mainColor !important;
+	border-bottom: none;
+	h1 , .buttons button, .back-button{
+		color: #fff !important;
+	}
 }
 
 .app-logo {
@@ -32,18 +45,31 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .pl-left-menu-container {
-	background-color: #418034; /*top colour*/
-	background-image: -webkit-linear-gradient(top, #418034, #cdeeb2);
-	background-image:    -moz-linear-gradient(top, #418034, #cdeeb2);
-	background-image:      -o-linear-gradient(top, #418034, #cdeeb2);
-	background-image:         linear-gradient(to bottom, #418034, #cdeeb2);
+	background: #5D9A52;
+}
+
+.pl-menu-item {
+	padding-left: 90px;
+}
+
+.pl-menu-item a {
+	padding-left:0px !important;
 }
 
 .pl-menu-item, .pl-menu-item .item-content {
 	background: transparent;
 	color: #fff;
-	border-color:#fff;
-	border-left: none;
+	border: none;
+
+	&:hover, &:active {
+		background: #85ab7e;
+		color: #fff;
+	}
+
+	i {
+		font-size: 25px;
+		margin-right: 10px;
+	}
 }
 
 i.alert {
@@ -52,4 +78,13 @@ i.alert {
 	display: block;
 	float: right;
 	margin-top: -50px;
+}
+
+.photo {
+	width: 80%;
+	margin: 20px auto;
+	display: block;
+	border: 1px solid gainsboro;
+	padding: 15px;
+	box-sizing: border-box;
 }
